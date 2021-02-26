@@ -1,0 +1,26 @@
+/*
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+a, a:hover, a:active, a:focus{
+	text-decoration:none;
+	border:none;
+	outline:none;
+	color: #6CF; 
+	/*color:#ffd4e6;*/
+	/*color: inherit;*/
+	}
+
+
+p
+{ margin-top: 0px; margin-bottom:0px;
+}
+
+/*img { max-width: 100%; }*/
+a[href^=tel] {
+	text-decoration:inherit;
+	color: #6CF; 
+	
+	/*color: inherit;*/
+}

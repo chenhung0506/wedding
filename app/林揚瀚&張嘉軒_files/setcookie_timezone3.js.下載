@@ -1,0 +1,16 @@
+function setCookie_timezone(c_name,value,exdays)
+{
+var exdate=new Date();
+exdate.setDate(exdate.getDate() + exdays);
+var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+document.cookie=c_name + "=" + c_value;
+}
+
+var now = new Date(),
+	tzo = -now.getTimezoneOffset(),
+	tz_sign = tzo >= 0 ? '' : '-';
+var tz_gap = Math.abs(Math.floor(tzo*10/6)/100);
+var tz_val = tz_sign + tz_gap;
+
+setCookie_timezone('usrdata_timezone',tz_val ,1);
+//alert(time_gap); 
