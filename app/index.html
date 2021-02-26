@@ -310,16 +310,16 @@ function clickObj(o){
 	<script type="text/javascript">
 
 	function loadScript() {
-	  var script = document.createElement('script');
-	  script.type = 'text/javascript';
-	  script.src = '//maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&callback=mapCallBackFunc';
-	  document.body.appendChild(script);
+	//   var script = document.createElement('script');
+	//   script.type = 'text/javascript';
+	//   script.src = '//maps.googleapis.com/maps/api/js?key=AIzaSyCF5MS1Oeo_dPBEQu9hyzZc5WnBPJaBwkE&callback=mapCallBackFunc';
+	//   document.body.appendChild(script);
 	  //console.log("load script");
 	  
 	  setSlideshow();
 	}
 
-	/////addWinOnloadEvent(loadScript);
+	addWinOnloadEvent(loadScript);
     
     
     </script>
@@ -1681,16 +1681,11 @@ $(document).ready(function() {
 							<div id="main_image_container">
 
 						
-                                <div class="invite_webimg_album" style="background:url(&#39;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2021/8/s2102259TQs4KDclw95G.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
-						
-                                <div class="invite_webimg_album" style="background:url(&#39;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2021/8/s210225WkWasTZvcdRHX.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
-						
-                                <div class="invite_webimg_album" style="background:url(&#39;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2021/8/s210225pxkE6MTTCvasM.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:100% 100%; background-size: cover; min-width:100%; min-height:100%"></div>
-						
-                                <div class="invite_webimg_album" style="background:url(&#39;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2021/8/s210225HylUs0pVjpb2H.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
-						
-                                <div class="invite_webimg_album" style="background:url(&#39;https://youvivid-jp-s3-uploads7img.youvivid.com/images/2021/8/s210225bQzHNA5SBltXM.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
-							
+                                <div class="invite_webimg_album" style="background:url(&#39;./林揚瀚_張嘉軒_files/images/s2102259TQs4KDclw95G.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
+                                <div class="invite_webimg_album" style="background:url(&#39;./林揚瀚_張嘉軒_files/images/s210225WkWasTZvcdRHX.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
+                                <div class="invite_webimg_album" style="background:url(&#39;./林揚瀚_張嘉軒_files/images/s210225pxkE6MTTCvasM.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:100% 100%; background-size: cover; min-width:100%; min-height:100%"></div>
+                                <div class="invite_webimg_album" style="background:url(&#39;./林揚瀚_張嘉軒_files/images/s210225HylUs0pVjpb2H.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
+                                <div class="invite_webimg_album" style="background:url(&#39;./林揚瀚_張嘉軒_files/images/s210225bQzHNA5SBltXM.jpg?x-img-process=fit-in/1500x1500/&#39;) no-repeat; background-position:50% 50%; background-size: cover; min-width:100%; min-height:100%"></div>
                                 <div class="invite_webimg_album auto" id="invite_webimg_album_mainimage" style="background:url(&#39;https://youvivid-jp-s3-uploads7cdn.youvivid.com/invite_wimage/s210225Mcuq8rUzgk3sR_1614241313148.jpg&#39;) no-repeat center center; background-size: cover; min-width:100%; min-height:100%"></div>
                                                     
                                 <img id="invite_webimg" style=" display:block" src="./林揚瀚_張嘉軒_files/s210225Mcuq8rUzgk3sR_1614241313148.jpg" width="100%" alt="Mobile Wedding Invitations">
@@ -1718,7 +1713,6 @@ $(document).ready(function() {
 </style>
 
 <script type="text/javascript">
-document.getElementById(&#39;freeAD&#39;).style.display = &#39;none&#39;;document.getElementById(&#39;freeADPlaceHolder&#39;).style.display = &#39;none&#39;;
 $(function() {
 /*	
 	$('#invite_webimg').on('load', function () {
@@ -1761,12 +1755,9 @@ function setSlideshow() {
 			  now_img = next_img;
 		},4000);
 	} else {
-		
-		
 	}
-
 }
-
+// document.getElementById("freeAD").style.display = "none";;document.getElementById(&#39;freeADPlaceHolder&#39;).style.display = &#39;none&#39;;
 
 function addSlideshowItem(fileurl){
 
