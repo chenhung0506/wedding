@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>捧花</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gradient-primary">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-1" style="background-color:yellow;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+      <div class="col-sm-1" style="background-color:pink;">
+        <div class="photo">
+          <div class="front"><div class="col-xs-1 text-center"></div></div>
+          <div class="back"><div class="col-xs-1 text-center"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="vendor/jquery/jquery.md5.js"></script>
+    <script>
+      $(document).ready(function() {
+          var count=0;
+          $('.photo').on('click',function(){
+              count ++;
+              if (count == 1) {
+                  drawCard($(this), 'golden.jpg', 'may-flower.jpeg', '五月花')
+              } else if (count == 2) {
+                  drawCard($(this), 'golden.jpg', 'pork.jpg', '豬五花')
+              } else if (count == 3) {
+                  drawCard($(this), 'platinum.jpg', 'flower.jpg', '幸福捧花')
+              }
+          })
+          function drawCard(obj, card1, card2, text){
+              obj.find('.front').css({'background': 'url("imgs/'+ card1 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
+              obj.find('.back' ).css({'background': 'url("imgs/'+ card1 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
+              obj.find('.front').css({'transform': 'rotateY(1800deg)','transition-duration': '3000ms'})
+              obj.find('.back' ).css({'transform': 'rotateY(1800deg)','transition-duration': '3000ms'})
+              setTimeout(() => {
+                  obj.find('.front').css({'background': 'url("imgs/'+ card2 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
+                  obj.find('.back' ).css({'background': 'url("imgs/'+ card2 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
+                  obj.find('.text-center').text(text)
+              }, 2200)
+          }
+      })
+        </script>
+<style>
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.front {
+  width: 180px;
+  height: 270px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:url("imgs/copper.jpg") center ;
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+.back {
+  width: 180px;
+  height: 270px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(-180deg);
+  background:url("imgs/copper.jpg") center ;
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+/* .photo:active .back {
+  transform: rotateY(360deg);
+}
+.photo:active .front {
+  transform: rotateY(360deg);
+} */
+
+</style>
+</body>
+
+</html>
