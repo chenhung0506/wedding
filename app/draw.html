@@ -15,53 +15,47 @@
 </head>
 <body class="bg-gradient-primary">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-1" style="background-color:yellow;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
+    <div class="row justify-content-center">
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
         </div>
       </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
-        </div>
-      </div>
-      <div class="col-sm-1" style="background-color:pink;">
-        <div class="photo">
-          <div class="front"><div class="col-xs-1 text-center"></div></div>
-          <div class="back"><div class="col-xs-1 text-center"></div></div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
+          <div class="photo col-md-3">
+            <div class="front"><div class="col-xs-1 text-center"></div></div>
+            <div class="back"><div class="col-xs-1 text-center"></div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -81,14 +75,25 @@
           $('.photo').on('click',function(){
               count ++;
               if (count == 1) {
-                  drawCard($(this), 'golden.jpg', 'may-flower.jpeg', '五月花')
+                  drawCard($(this), 'silver.jpg', 'may-flower.jpeg', '五月花')
               } else if (count == 2) {
-                  drawCard($(this), 'golden.jpg', 'pork.jpg', '豬五花')
+                  drawCard($(this), 'silver.jpg', 'may-flower.jpeg', '五月花')
               } else if (count == 3) {
+                  drawCard($(this), 'silver.jpg', 'may-flower.jpeg', '五月花')
+              } else if (count == 4) {
+                  drawCard($(this), 'silver.jpg', 'may-flower.jpeg', '五月花')
+              } else if (count == 5) {
+                  drawCard($(this), 'silver.jpg', 'pork.jpg', '豬五花')
+              } else if (count == 6) {
                   drawCard($(this), 'platinum.jpg', 'flower.jpg', '幸福捧花')
+                  setTimeout(() => {
+                      drawCard($('.photo'), 'silver.jpg', 'pork.jpg', '豬五花')
+                  }, 10)
               }
           })
           function drawCard(obj, card1, card2, text){
+              console.log(obj)
+              obj.removeClass('photo')
               obj.find('.front').css({'background': 'url("imgs/'+ card1 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
               obj.find('.back' ).css({'background': 'url("imgs/'+ card1 +'") center','background-size': 'cover', 'background-repeat': 'no-repeat', 'background-position': 'center'})
               obj.find('.front').css({'transform': 'rotateY(1800deg)','transition-duration': '3000ms'})
